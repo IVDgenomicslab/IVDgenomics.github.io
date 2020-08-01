@@ -1,10 +1,8 @@
-## Welcome to scDetect: A rank-based ensemble learning classifier of cell types for single-cell RNA sequencing
+## Summary
 
-You can use the [editor on GitHub](https://github.com/IVDgenomicslab/scDetect.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+[scDetect](https://github.com/IVDgenomicslab/scDetect/) is a new ensemble learning method which combines gene expression rank-based analysis and a majority vote ensemble machine-learning probability-based prediction method capable of highly accurate classification of cells based on scRNA-seq data by different sequencing platforms.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
+## Application of scDetect
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
