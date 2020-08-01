@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to scDetect: A rank-based ensemble learning classifier of cell types for single-cell RNA sequencing
 
 You can use the [editor on GitHub](https://github.com/IVDgenomicslab/scDetect.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
