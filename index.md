@@ -6,30 +6,32 @@ To further accurate predict the tumor cells in the single cell RNA-seq data, we 
 
 ## Application of scDetect
 
-First, we load the scPred package
+First, we load the [scDetect](https://github.com/IVDgenomicslab/scDetect/) package, and [Seurat](https://satijalab.org/seurat/install.html)
 
 ```markdown
-Syntax highlighted code block
 
-library("scPred")
+library("scDetect")
+library("Seurat")
 
-# Header 1
-
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+We will work with single cell data from two human pancreas dataset. "Muraro" dataset were generated from CEL-Seq2 platform, "Xin" dataset were generated from SMARTer platform.
+
+The count matrix and cell type lable of the test data could be obtained here.
+
+Read the gene expression data and cell type lable.
+
+```markdown
+
+# Xin human pancreas dataset #
+xin<-readRDS("~/xin_test.rds")
+xin_lable<-readRDS("~/xin_test_lable.rds")
+
+# Muraro human pancreas dataset #
+muraro<-readRDS("~/muraro_test.rds")
+muraro_lable<-readRDS("~/muraro_test_lable.rds")
+
+```
 
 ## Training step
 
