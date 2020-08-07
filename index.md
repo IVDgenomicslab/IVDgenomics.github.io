@@ -29,7 +29,7 @@ muraro<-readRDS("~/muraro_test.rds")
 muraro_lable<-readRDS("~/muraro_test_lable.rds")
 ```
 
-## Prediction
+#### Prediction
 
 To make scDetect easy to use, all steps were integrated into one function -- scDetect(). 
 
@@ -108,7 +108,7 @@ train_set_lable<-readRDS("~/melanoma_reference_lable.rds")
 vali_set_matrix<-readRDS("~/melanoma_test.rds")
 ```
 
-## Prediction
+#### Prediction
 
 To make scDetect-Cancer easy to use, all steps were integrated into one function -- scDetect-Cancer(). 
 
