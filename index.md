@@ -43,7 +43,7 @@ train_set_matrix<-muraro
 train_set_lable<-muraro_lable
 
 # Prediction #
-prediction_results<-scDetect(vali_set_matrix,train_set_matrix,train_set_lable,p_value=0.5)
+prediction_results<-scDetect(vali_set_matrix,train_set_matrix,train_set_lable,p_value=0.2)
 ```
 
 We can obtain a table showing the prediction results and detailed inforamtion.
@@ -61,26 +61,26 @@ final_predict_lable: Predicted cell type based on the predict score and pvalue.
 
 ```markdown
 ##           predict_lable     predict_score pvalue final_predict_lable
-##Sample_1           beta  0.44047619047619  0.512             Unknown
-##Sample_2           beta 0.452380952380952  0.439                beta
-##Sample_3           beta 0.619047619047618   0.08                beta
-##Sample_4           beta 0.571428571428572  0.141                beta
-##Sample_6           beta 0.666666666666667  0.059                beta
-##Sample_7           beta 0.452380952380952  0.439                beta
-##Sample_9           beta               0.5  0.348                beta
-##Sample_12          beta 0.416666666666667  0.548             Unknown
-##Sample_13          beta               0.5  0.348                beta
-##Sample_14          beta 0.738095238095238  0.012                beta
-##Sample_15          beta 0.833333333333333  0.006                beta
-##Sample_16          beta 0.619047619047618   0.08                beta
-##Sample_17          beta 0.571428571428572  0.141                beta
-##Sample_18          beta 0.369047619047618  0.708             Unknown
-##Sample_19          beta 0.654761904761905  0.059                beta
-##Sample_20          beta 0.523809523809523  0.263                beta
-##Sample_21          beta 0.523809523809523  0.263                beta
-##Sample_24          beta 0.619047619047618   0.08                beta
-##Sample_25          beta 0.404761904761905  0.572             Unknown
-##Sample_26          beta 0.571428571428572  0.141                beta
+## Sample_1           beta             0.475  0.263             Unknown
+## Sample_2           beta             0.525  0.181                beta
+## Sample_3           beta 0.666666666666667  0.045                beta
+## Sample_4           beta 0.508333333333333    0.2                beta
+## Sample_5           beta 0.591666666666667  0.095                beta
+## Sample_6           beta              0.55   0.16                beta
+## Sample_7           beta             0.625  0.079                beta
+## Sample_8           beta 0.416666666666667  0.458             Unknown
+## Sample_9           beta             0.625  0.079                beta
+## Sample_10          beta 0.516666666666667  0.181                beta
+## Sample_11          beta 0.666666666666667  0.045                beta
+## Sample_12          beta 0.516666666666667  0.181                beta
+## Sample_13          beta 0.633333333333333  0.072                beta
+## Sample_14          beta             0.675  0.021                beta
+## Sample_15          beta 0.716666666666667  0.021                beta
+## Sample_16          beta 0.591666666666667  0.095                beta
+## Sample_17          beta             0.625  0.079                beta
+## Sample_18          beta 0.591666666666667  0.095                beta
+## Sample_19          beta 0.633333333333333  0.072                beta
+## Sample_20          beta              0.45  0.346             Unknown
 ```
 
 
