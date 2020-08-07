@@ -20,7 +20,6 @@ The count matrix and cell type lable of the test data could be obtained here.
 Read the gene expression data and cell type lable.
 
 ```markdown
-
 # Xin human pancreas dataset #
 xin<-readRDS("~/xin_test.rds")
 xin_lable<-readRDS("~/xin_test_lable.rds")
@@ -28,7 +27,6 @@ xin_lable<-readRDS("~/xin_test_lable.rds")
 # Muraro human pancreas dataset #
 muraro<-readRDS("~/muraro_test.rds")
 muraro_lable<-readRDS("~/muraro_test_lable.rds")
-
 ```
 
 ## Prediction
@@ -46,7 +44,6 @@ train_set_lable<-muraro_lable
 
 # Prediction #
 prediction_results<-scDetect(vali_set_matrix,train_set_matrix,train_set_lable,p_value=0.5)
-
 ```
 
 We can obtain a table showing the prediction results and detailed inforamtion.
@@ -122,10 +119,8 @@ The gene position file used for single cell copy number variation analysis and g
 
 
 ```markdown
-
 # Prediction #
 scDetect_Cancer_results<-scDetect_Cancer(vali_set_matrix,train_set_matrix,train_set_lable,gene_position_file,gene_list,output_dir)
-
 ```
 
 We can obtain a list included the prediction results and detailed inforamtion.
