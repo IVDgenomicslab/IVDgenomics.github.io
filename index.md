@@ -128,26 +128,36 @@ We can obtain a list included the prediction results and detailed inforamtion.
 The prediction results:
 
 ```markdown
-scDetect_Cancer_results$lable[1:10]
-##  "Tumor"   "Unknown" "Bcell"   "Unknown" "Unknown" "Unknown" "Tumor"   "Unknown" "Tumor"   "Bcell" 
+scDetect_Cancer_results$lable[1:20]
+##   "Tumor"   "Bcell"   "Bcell"   "Unknown" "Tcell"   "Unknown" "Tumor"   "Unknown" "Tumor"   "Bcell"   "Tcell"   "Tcell"   "Tcell"   "Tumor"   "Unknown" "Tcell" "Tumor"   "Bcell"   "Tumor"   "Tcell"
 ```
 
 The detailed inforamtion:
 
 
 ```markdown
-scDetect_Cancer_results$detail_info[1:10,]
+scDetect_Cancer_results$detail_info[1:20,]
 ##                                        CNV_Class CNV_entropy_score anno_file Epithelial_score Epithelial_pvalue Epithelial_class   raw_lable final_lable
-##cy81.Bulk.CD45.neg.B04.S112.comb           Tumor          7.935449     Other        0.2969218      6.743253e-99            Tumor  Fibroblast       Tumor
-##cy94_cd45pos_4_C09_S33_comb                Other          7.940964     Other        0.1443036      1.000000e+00            Other     Unknown     Unknown
-##cy72.CD45.pos.D04.S904.comb                Other          7.940905     Other        0.1684391      1.000000e+00            Other       Bcell       Bcell
-##CY88CD45POS_2_D09_S429_comb                Other          7.942583     Other        0.2982854     7.294346e-100            Tumor       Tcell     Unknown
-##CY75_1_CD45_CD8_1__S29_comb                Other          7.941474     Other        0.1341299      1.000000e+00            Other     Unknown     Unknown
-##Cy80_II_CD45_F08_S932_comb                 Other          7.939729     Other        0.2424808      1.027392e-49            Tumor Endothelial     Unknown
-##cy78.CD45.neg.2.C06.S606.comb              Tumor          7.936766     Other        0.3007999     1.283167e-101            Tumor  Fibroblast       Tumor
-##CY94_CD45NEG_CD90POS_2_C02_S26_comb        Other          7.942693     Tcell        0.2200829      5.575592e-23            Tumor       Tcell     Unknown
-##cy78.CD45.neg.2.A05.S581.comb              Tumor          7.933140     Other        0.3436351     3.547529e-127            Tumor  Fibroblast       Tumor
-##cy79.p3.CD45.pos.PD1.neg.G01.S169.comb     Other          7.941923     Other        0.1801278      9.999995e-01            Other       Bcell       Bcell
+##cy81.Bulk.CD45.neg.B04.S112.comb             Tumor          8.072779     Other        0.2969218      2.881267e-51            Tumor  Fibroblast       Tumor
+##cy94_cd45pos_4_C09_S33_comb                  Other          8.078587     Other        0.1443036      1.000000e+00            Other       Bcell       Bcell
+##cy72.CD45.pos.D04.S904.comb                  Other          8.077199     Other        0.1684391      9.999999e-01            Other       Bcell       Bcell
+##CY88CD45POS_2_D09_S429_comb                  Other          8.079058     Other        0.2982854      8.454728e-52            Tumor       Tcell     Unknown
+##CY75_1_CD45_CD8_1__S29_comb                  Other          8.078603     Tcell        0.1341299      1.000000e+00            Other       Tcell       Tcell
+##Cy80_II_CD45_F08_S932_comb                   Other          8.077468     Other        0.2424822      3.359626e-25            Tumor Endothelial     Unknown
+##cy78.CD45.neg.2.C06.S606.comb                Tumor          8.073131     Other        0.3008013      9.071703e-53            Tumor Endothelial       Tumor
+##CY94_CD45NEG_CD90POS_2_C02_S26_comb          Other          8.079323     Tcell        0.2200801      3.368614e-12            Tumor       Tcell     Unknown
+##cy78.CD45.neg.2.A05.S581.comb                Tumor          8.069823     Other        0.3436408      4.530180e-67            Tumor  Fibroblast       Tumor
+##cy79.p3.CD45.pos.PD1.neg.G01.S169.comb       Other          8.078866     Other        0.1801278      9.928248e-01            Other       Bcell       Bcell
+##CY75_1_CD45_CD8_3__S106_comb                 Other          8.079064     Other        0.1324336      1.000000e+00            Other       Tcell       Tcell
+##cy53.1.CD45.pos.2.E04.S1012.comb             Other          8.078719     Tcell        0.1793396      9.958538e-01            Other       Tcell       Tcell
+##CY89A_CD45_POS_10_A04_S196_comb              Other          8.078433     Other        0.2101634      5.537329e-07            Other       Tcell       Tcell
+##cy78.CD45.neg.3.A10.S682.comb                Tumor          8.074718     Other        0.2905377      1.049571e-48            Tumor  Fibroblast       Tumor
+##cy80.Cd45.pos.PD1.pos.B01.S37.comb           Other          8.079013     Other        0.2456721      5.311377e-27            Tumor       Tcell     Unknown
+##CY84_PRIM_POS_All_7_B11_S215_comb            Other          8.078439     Other        0.1528024      1.000000e+00            Other       Tcell       Tcell
+##cy79.p4.CD45.neg.PDL1.neg.B09.S1077.comb     Tumor          8.074930     Other        0.2632536      2.483141e-36            Tumor       Bcell       Tumor
+##Cy72_CD45_C03_S699_comb                      Other          8.078826     Other        0.1689189      9.999998e-01            Other       Bcell       Bcell
+##cy79.p4.CD45.neg.PDL1.pos.C07.S415.comb      Tumor          8.072491     Other        0.2878176      1.405910e-47            Tumor  Fibroblast       Tumor
+##CY75_1_CD45_CD8_8__S293_comb                 Other          8.079135     Other        0.1570361      1.000000e+00            Other       Tcell       Tcell
 ```
 
 
