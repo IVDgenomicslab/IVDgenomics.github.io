@@ -15,7 +15,7 @@ library("Seurat")
 
 We will work with single cell data from two human pancreas dataset. "Muraro" dataset were generated from CEL-Seq2 platform, "Xin" dataset were generated from SMARTer platform.
 
-The count matrix and cell type lable of the test data could be obtained here.
+The count matrix and cell type lable of the test data could be obtained [here](https://github.com/IVDgenomicslab/scDetect/tree/master/test_data).
 
 Read the gene expression data and cell type lable.
 
@@ -31,7 +31,7 @@ muraro_lable<-readRDS("~/muraro_test_lable.rds")
 
 #### Prediction
 
-To make scDetect easy to use, all steps were integrated into one function -- scDetect(). 
+To make scDetect easy to use, all steps were integrated into one function -- scDetect. 
 
 Here, we used Muraro pancreas dataset as the training dataset to predcit the cell types in Xin pancreas dataset. 
 
@@ -95,7 +95,7 @@ library("Seurat")
 
 We will work with single cell data from a test melanoma dataset. 
 
-The count matrix and cell type lable of the test data could be obtained [here].
+The count matrix and cell type lable of the test data could be obtained [here](https://github.com/IVDgenomicslab/scDetect/tree/master/test_data).
 
 Read the gene expression data and cell type lable.
 
@@ -110,7 +110,7 @@ vali_set_matrix<-readRDS("~/melanoma_test.rds")
 
 #### Prediction
 
-To make scDetect-Cancer easy to use, all steps were integrated into one function -- scDetect-Cancer(). 
+To make scDetect-Cancer easy to use, all steps were integrated into one function -- scDetect-Cancer. 
 
 Here, we used Melanoma reference dataset (without tumor cells) as the training dataset to predcit the cell types in a melanoma test dataset. 
 
