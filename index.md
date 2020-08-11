@@ -21,12 +21,12 @@ Read the gene expression data and cell type lable.
 
 ```markdown
 # Xin human pancreas dataset #
-xin<-readRDS("~/xin_test.rds")
-xin_lable<-readRDS("~/xin_test_lable.rds")
+xin<-counts(xin_test)
+xin_lable<-xin_test$label
 
 # Muraro human pancreas dataset #
-muraro<-readRDS("~/muraro_test.rds")
-muraro_lable<-readRDS("~/muraro_test_lable.rds")
+muraro<-counts(muraro_test)
+muraro_lable<-muraro_test$label
 ```
 
 #### Prediction
@@ -38,12 +38,8 @@ Here, we used Muraro pancreas dataset as the training dataset to predcit the cel
 
 ```markdown
 # Using Muraro dataset as the training dataset #
-vali_set_matrix<-xin
-train_set_matrix<-muraro
-train_set_lable<-muraro_lable
-
 # Prediction #
-prediction_results<-scDetect(vali_set_matrix,train_set_matrix,train_set_lable,p_value=0.2)
+prediction_results<-scDetect(vali_set_matrix = xin, train_set_matrix = muraro, train_set_lable = muraro_lable,p_value=0.2)
 ```
 
 We can obtain a table showing the prediction results and detailed inforamtion.
@@ -60,6 +56,7 @@ final_predict_lable: Predicted cell type based on the predict score and pvalue.
 
 
 ```markdown
+prediction_results[1:20,]
 ##           predict_lable     predict_score pvalue final_predict_lable
 ## Sample_1           beta             0.475  0.263             Unknown
 ## Sample_2           beta             0.525  0.181                beta
@@ -83,6 +80,32 @@ final_predict_lable: Predicted cell type based on the predict score and pvalue.
 ## Sample_20          beta              0.45  0.346             Unknown
 ```
 
+#### Evaluation
+Evaluate the prediction results.
+
+```markdown
+evaluate_results<-evaluate(xin_lable,prediction_results$final_predict_lable)
+```
+
+Accuracy of the cell type prediction results.
+
+```markdown
+evaluate_results$Acc
+## 0.9758491
+```
+
+Confusion matrix of the cell type prediction results.
+
+```markdown
+evaluate_results$Conf
+##          pred_lab
+##  true_lab acinar alpha beta delta gamma Unknown
+##   alpha      1   846    0     0     0      39
+##   beta       1     7  352    15     0      97
+##   delta      0     2    0    33     0      14
+##   gamma      0     6    0     0    62      17
+```
+
 
 ## Application of scDetect-Cancer
 
@@ -101,11 +124,11 @@ Read the gene expression data and cell type lable.
 
 ```markdown
 # Melanoma reference dataset #
-train_set_matrix<-readRDS("~/melanoma_reference.rds")
-train_set_lable<-readRDS("~/melanoma_reference_lable.rds")
+mela_ref<-counts(melanoma_ref)
+mela_ref_lable<-melanoma_ref$label
 
 # Melanoma test dataset #
-vali_set_matrix<-readRDS("~/melanoma_test.rds")
+mela_test<-counts(melanoma_test)
 ```
 
 #### Prediction
@@ -117,10 +140,15 @@ Here, we used Melanoma reference dataset (without tumor cells) as the training d
 The gene position file used for single cell copy number variation analysis and gene list file used for epithelial score analysis could be obtained [here](https://github.com/IVDgenomicslab/scDetect/tree/master/scDetect-Cancer-file).
 
 
+Create temporary directory.
+
+```markdown
+output_dir<-tempdir()
+```
 
 ```markdown
 # Prediction #
-scDetect_Cancer_results<-scDetect_Cancer(vali_set_matrix,train_set_matrix,train_set_lable,gene_position_file,gene_list,output_dir)
+scDetect_Cancer_results<-scDetect_Cancer(vali_set_matrix = mela_test, train_set_matrix = mela_ref, train_set_lable = mela_ref_lable, gene_position_file, gene_list, output_dir)
 ```
 
 We can obtain a list included the prediction results and detailed inforamtion.
@@ -161,5 +189,29 @@ scDetect_Cancer_results$detail_info[1:20,]
 ```
 
 
-
+## sessionInfo
+```markdown
+sessionInfo()
+#> R version 3.6.3 (2020-02-29)
+#> Platform: x86_64-w64-mingw32/x64 (64-bit)
+#> Running under: Windows 7 x64 (build 7600)
+#> 
+#> Matrix products: default
+#> 
+#> locale:
+#> [1] LC_COLLATE=Chinese (Simplified)_China.936 
+#> [2] LC_CTYPE=Chinese (Simplified)_China.936   
+#> [3] LC_MONETARY=Chinese (Simplified)_China.936
+#> [4] LC_NUMERIC=C                              
+#> [5] LC_TIME=Chinese (Simplified)_China.936    
+#> 
+#> attached base packages:
+#> [1] stats     graphics  grDevices utils     datasets  methods   base     
+#> 
+#> loaded via a namespace (and not attached):
+#>  [1] compiler_3.6.3  magrittr_1.5    tools_3.6.3     htmltools_0.4.0
+#>  [5] yaml_2.2.1      Rcpp_1.0.3      stringi_1.4.6   rmarkdown_2.1  
+#>  [9] knitr_1.28      stringr_1.4.0   xfun_0.12       digest_0.6.25  
+#> [13] rlang_0.4.5     evaluate_0.14
+```
 
