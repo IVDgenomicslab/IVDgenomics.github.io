@@ -189,7 +189,7 @@ scDetect_Cancer_results$detail_info[1:20,]
 ```
 
 
-## sessionInfo
+## SessionInfo
 ```markdown
 sessionInfo()
 #> R version 3.6.3 (2020-02-29)
