@@ -114,7 +114,7 @@ To make scDetect-Cancer easy to use, all steps were integrated into one function
 
 Here, we used Melanoma reference dataset (without tumor cells) as the training dataset to predcit the cell types in a melanoma test dataset. 
 
-The gene position file used for single cell copy number variation analysis and gene list file used for epithelial score analysis could be obtained [here].
+The gene position file used for single cell copy number variation analysis and gene list file used for epithelial score analysis could be obtained [here](https://github.com/IVDgenomicslab/scDetect/tree/master/scDetect-Cancer-file).
 
 
 
