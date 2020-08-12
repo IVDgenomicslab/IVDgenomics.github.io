@@ -15,8 +15,6 @@ library("Seurat")
 
 We will work with single cell data from two human pancreas dataset. "Muraro" dataset were generated from CEL-Seq2 platform, "Xin" dataset were generated from SMARTer platform.
 
-The count matrix and cell type lable of the test data could be obtained [here](https://github.com/IVDgenomicslab/scDetect/tree/master/test_data).
-
 Read the gene expression data and cell type lable.
 
 ```markdown
@@ -117,8 +115,6 @@ library("Seurat")
 ```
 
 We will work with single cell data from a test melanoma dataset. 
-
-The count matrix and cell type lable of the test data could be obtained [here](https://github.com/IVDgenomicslab/scDetect/tree/master/test_data).
 
 Read the gene expression data and cell type lable.
 
