@@ -6,9 +6,10 @@ To further accurate predict the tumor cells in the single cell RNA-seq data, we 
 
 ## Application of scDetect
 
-First, we load the [scDetect](https://github.com/IVDgenomicslab/scDetect/) package, and [Seurat](https://satijalab.org/seurat/install.html)
+First, we load the [rJava](https://cran.r-project.org/web/packages/rJava/index.html), [scDetect](https://github.com/IVDgenomicslab/scDetect/) package, and [Seurat](https://satijalab.org/seurat/install.html)
 
 ```markdown
+library("rJava")
 library("scDetect")
 library("Seurat")
 ```
