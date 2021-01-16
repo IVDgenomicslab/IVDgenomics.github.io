@@ -32,7 +32,7 @@ muraro_lable<-muraro_test$label
 
 To make scDetect easy to use, all steps were integrated into one function -- scDetect. 
 
-Here, we used Muraro pancreas dataset as the training dataset to predcit the cell types in Xin pancreas dataset. 
+Here, we used Muraro pancreas dataset as the training dataset to predict the cell types in Xin pancreas dataset. 
 
 
 ```markdown
