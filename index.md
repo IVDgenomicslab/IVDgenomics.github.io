@@ -32,7 +32,7 @@ muraro_lable<-muraro_test$label
 
 To make scDetect easy to use, all steps were integrated into one function -- scDetect. 
 
-Here, we used Muraro pancreas dataset as the training dataset to predict the cell types in Xin pancreas dataset. 
+Here, we used Muraro pancreas dataset as the training dataset to predict the cell types in Xin pancreas dataset. Muraro and Xin pancreas dataset had different cell type numbers. There are 9 cell types in Muraro dataset and 4 cell types in Xin dataset. The cell types in Xin dataset were included in the Muraro dataset. In the tutorial, we used Muraro dataset as the training dataset to predict the cell types in the Xin dataset. We suggested that the training dataset should be contained more cell types than the dataset be predicted. So that there will be less unclassified and misclassified cells in the prediction dataset. 
 
 
 ```markdown
